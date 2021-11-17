@@ -26,15 +26,4 @@ function initDatabse(): ?PDO
     }
 }
 
-function retournerLesPosts() {
 
-    $db = initDatabse();
-    $res = $db->query("SELECT * FROM posts;", PDO::FETCH_ASSOC);
-    return $res;
-}
-
-function retournerLesCommentaires($postId) {
-    $db = initDatabse();
-    $res = $db->query("SELECT * FROM comments WHERE post_id = '" . $postId . "';", PDO::FETCH_ASSOC);
-    return $res;
-}
